@@ -1,0 +1,5 @@
+<form ngNativeValidate #f="ngForm" (ngSubmit)="onSubmit(f)" class="addItem">
+    <input placeholder="Name" [(ngModel)]="model.name" name="name" required minlength="1"/>
+    <input placeholder="Note" [(ngModel)]="model.note" name="note" required minlength="0"/>
+    <button type="submit">Save</button>
+</form>
