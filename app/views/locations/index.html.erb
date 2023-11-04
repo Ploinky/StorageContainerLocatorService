@@ -1,3 +1,8 @@
+<div class="locations-header">
+  <h5>Your Locations</h5>
+  <%= link_to "Add Location", new_location_path %>
+</div>
+
 <div class="card-container">
   <% @locations.each do |location| %>
     <a href="<%= location_path(location) %>">
@@ -5,5 +10,3 @@
     </a>
   <% end %>
 </div>
-
-<%= link_to "Add new location", new_location_path %>

@@ -1,0 +1,5 @@
+<h5>Your Containers</h5>
+<%= link_to "Add Container", new_container_path %>
+<% @containers.each do |container| %>
+    <%= render "components/card", :location => container %>
+<% end %>
