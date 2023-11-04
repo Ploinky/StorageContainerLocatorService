@@ -1,0 +1,11 @@
+:root {
+  --base-size: 1rem;
+  --size-xs: calc(var(--base-size) * 0.5);
+  --size-s: calc(var(--base-size) * 0.75);
+  --size-m: var(--base-size);
+  --size-l: calc(var(--base-size) * 1.25);
+  --size-xl: calc(var(--base-size) * 1.5);
+  --size-xxl: calc(var(--base-size) * 2);
+
+  --color-primary: salmon;
+}

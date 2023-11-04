@@ -1,0 +1,12 @@
+.card-container {
+  display: grid;
+  grid-template: '1fr 1fr 1fr 1fr 1fr';
+  gap: var(--size-m);
+  padding: var(--size-m);
+
+  .card {
+    padding: var(--size-m);
+    background-color: var(--color-surface-container-highest);
+    border-radius: var(--shape-corner-medium);
+  }
+}

@@ -1,0 +1,9 @@
+<div class="card-container">
+  <% @locations.each do |location| %>
+    <a href="<%= location_path(location) %>">
+      <%= render "components/card", :location => location %>
+    </a>
+  <% end %>
+</div>
+
+<%= link_to "Add new location", new_location_path %>
