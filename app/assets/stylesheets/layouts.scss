@@ -8,14 +8,3 @@
   display: flex;
   flex-direction: row;
 }
-
-.navigation-link {
-  padding: var(--size-m) var(--size-s);
-  color: var(--color-on-surface-variant);
-  border-radius: var(--shape-corner-full);
-
-  &:hover {
-    color: var(--color-on-surface);
-    background-color: var(--color-surface-bright);
-  }
-}

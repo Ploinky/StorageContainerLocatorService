@@ -14,16 +14,12 @@
     <header class="header">
       <h1>Storage Container Locator Service</h1>
       <nav class="navigation">
-        <a href="<%= locations_path %>">
-          <span class="navigation-link">
-            Locations
-          </span>
-        </a>
-        <a href="<%= containers_path %>">
-          <span class="navigation-link">
-            Containers
-          </span>
-        </a>
+        <%= render "components/link", {to: locations_path} do %>
+          Locations
+        <% end %>
+        <%= render "components/link", {to: containers_path} do %>
+          Containers
+        <% end %>
       </nav>
     </header>
     <%= yield %>

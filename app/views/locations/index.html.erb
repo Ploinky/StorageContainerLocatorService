@@ -1,12 +1,17 @@
 <div class="locations-header">
   <h5>Your Locations</h5>
-  <%= link_to "Add Location", new_location_path %>
+  <%= render "components/link", {to: new_location_path} do %>
+    Add Location
+  <% end %>
 </div>
 
 <div class="card-container">
   <% @locations.each do |location| %>
     <a href="<%= location_path(location) %>">
-      <%= render "components/card", :location => location %>
+      <%= render "components/card", {
+        :title => location.name,
+        :subtitle => "subtitle"
+      } %>
     </a>
   <% end %>
 </div>
