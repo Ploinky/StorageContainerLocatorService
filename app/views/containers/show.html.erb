@@ -1,0 +1,14 @@
+<h1><%= @container.name %> </h1>
+
+<ul>
+  <li>
+    <%= link_to "Edit", edit_container_path(@container) %>
+  </li>
+
+  <li>
+    <%= link_to "Delete", container_path(@container), data: {
+      turbo_method: :delete,
+      turbo_confirm: "Are you sure?"
+    } %>
+  </li>
+</ul>

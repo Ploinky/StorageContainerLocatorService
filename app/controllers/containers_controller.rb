@@ -3,13 +3,26 @@ class ContainersController < ApplicationController
     @containers = Container.all
   end
 
+  def show
+    @container = Container.find(params[:id])
+  end
+
   def new
     @container = Container.new
+    @locations = Location.all
   end
 
   def create
-    @container = Container.new(container_params)
+    @location = Location.find(params[:location_id])
 
+    if !@location 
+      return
+    end
+
+    @container = Container.new(container_params)
+    @container.location_id = @location.id
+    puts @container.location_id
+    
     if @container.save
       redirect_to @container
     else

@@ -1,5 +1,5 @@
 <div class="locations-header">
-  <h5>Your Locations</h5>
+  <h5>Your Locations </h5>
   <%= render "components/link", {to: new_location_path} do %>
     Add Location
   <% end %>
@@ -10,7 +10,7 @@
     <a href="<%= location_path(location) %>">
       <%= render "components/card", {
         :title => location.name,
-        :subtitle => "subtitle"
+        :subtitle => "Containers: " + @count.to_s
       } %>
     </a>
   <% end %>

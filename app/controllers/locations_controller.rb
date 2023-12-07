@@ -1,6 +1,11 @@
 class LocationsController < ApplicationController
   def index
     @locations = Location.all
+
+    @count = Container.where(
+      location_id: "2"
+    ).count
+
   end
 
   def show
